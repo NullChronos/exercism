@@ -12,7 +12,8 @@ defmodule RotationalCipher do
     convert(chars, shift)
   end
 
-  def convert([<<codepoint>> | tail], shift_key, acc \\ "") do
+  def convert(chars, shift_key, acc \\ "")
+  def convert([<<codepoint>> | tail], shift_key, acc) do
     new_acc = acc <> List.to_string([shift(codepoint, shift_key)])
     convert(tail, shift_key, new_acc)
   end
