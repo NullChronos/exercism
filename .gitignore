@@ -1,0 +1,8 @@
+# Ignore build directory
+/_build/
+
+# Ignore all dependencies
+/deps/
+
+# Ignore Erlang VM crash reports
+erl_crash.dump
